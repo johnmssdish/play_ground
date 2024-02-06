@@ -1,16 +1,6 @@
-import copy
-a=[1,2,3]
-b=[5,6,7]
-d=copy.deepcopy(b)
-b.append(111)
-print(d)
-print(a+b)
+class Solution:
+    def lowestCommonAncestor(self, root: 'TreeNode', p: 'TreeNode', q: 'TreeNode') -> 'TreeNode':
 
-for i in range(3):
-    print('oo')
-    if i ==1:
-        break
-print('po')
 
         if root is None or root == p or root == q:
             return root
@@ -25,4 +15,3 @@ print('po')
 
         # If either left or right subtree has an LCA, return that LCA.
         return left_lca if left_lca else right_lca
-
